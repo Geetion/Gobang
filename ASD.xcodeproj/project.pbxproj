@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4013ECDF47821B91A7DF815 /* Pods_ASD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 402A0A41BAB581D1256B1A3D /* Pods_ASD.framework */; };
 		C054401D1D001F32004891F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C054401C1D001F32004891F5 /* AppDelegate.swift */; };
 		C054401F1D001F32004891F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C054401E1D001F32004891F5 /* ViewController.swift */; };
 		C05440221D001F32004891F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05440201D001F32004891F5 /* Main.storyboard */; };
@@ -14,6 +15,10 @@
 		C05440271D001F32004891F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05440251D001F32004891F5 /* LaunchScreen.storyboard */; };
 		C05440321D001F32004891F5 /* ASDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05440311D001F32004891F5 /* ASDTests.swift */; };
 		C054403D1D001F32004891F5 /* ASDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C054403C1D001F32004891F5 /* ASDUITests.swift */; };
+		C054404B1D00296D004891F5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C054404A1D00296D004891F5 /* SnapKit.framework */; };
+		C054404C1D00296D004891F5 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C054404A1D00296D004891F5 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C0F294A71D153D59005BF4F3 /* ChessboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F294A61D153D59005BF4F3 /* ChessboardView.swift */; };
+		C0F294A91D1566FC005BF4F3 /* LocationProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F294A81D1566FC005BF4F3 /* LocationProperty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +38,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C054404D1D00296E004891F5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C054404C1D00296D004891F5 /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1AE6E78A524C687D8AC341E1 /* Pods-ASD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASD.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASD/Pods-ASD.release.xcconfig"; sourceTree = "<group>"; };
+		402A0A41BAB581D1256B1A3D /* Pods_ASD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C05440191D001F32004891F5 /* ASD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C054401C1D001F32004891F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C054401E1D001F32004891F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +68,10 @@
 		C05440381D001F32004891F5 /* ASDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C054403C1D001F32004891F5 /* ASDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASDUITests.swift; sourceTree = "<group>"; };
 		C054403E1D001F32004891F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C054404A1D00296D004891F5 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SnapKit.framework; path = "/Users/Geetion/Library/Developer/Xcode/DerivedData/ASD-ghewztxoqgsgxebfvhzozwcvazge/Build/Products/Debug-iphonesimulator/SnapKit/SnapKit.framework"; sourceTree = "<absolute>"; };
+		C0F294A61D153D59005BF4F3 /* ChessboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessboardView.swift; sourceTree = "<group>"; };
+		C0F294A81D1566FC005BF4F3 /* LocationProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationProperty.swift; sourceTree = "<group>"; };
+		E8639E6A0944291F69509718 /* Pods-ASD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASD/Pods-ASD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4013ECDF47821B91A7DF815 /* Pods_ASD.framework in Frameworks */,
+				C054404B1D00296D004891F5 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +101,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1924F1092E0C023B7BA1877F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8639E6A0944291F69509718 /* Pods-ASD.debug.xcconfig */,
+				1AE6E78A524C687D8AC341E1 /* Pods-ASD.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C05440101D001F32004891F5 = {
 			isa = PBXGroup;
 			children = (
+				C054404A1D00296D004891F5 /* SnapKit.framework */,
 				C054401B1D001F32004891F5 /* ASD */,
 				C05440301D001F32004891F5 /* ASDTests */,
 				C054403B1D001F32004891F5 /* ASDUITests */,
 				C054401A1D001F32004891F5 /* Products */,
+				1924F1092E0C023B7BA1877F /* Pods */,
+				FA87CC8BC12A0639E5106057 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +138,8 @@
 			children = (
 				C054401C1D001F32004891F5 /* AppDelegate.swift */,
 				C054401E1D001F32004891F5 /* ViewController.swift */,
+				C0F294A61D153D59005BF4F3 /* ChessboardView.swift */,
+				C0F294A81D1566FC005BF4F3 /* LocationProperty.swift */,
 				C05440201D001F32004891F5 /* Main.storyboard */,
 				C05440231D001F32004891F5 /* Assets.xcassets */,
 				C05440251D001F32004891F5 /* LaunchScreen.storyboard */,
@@ -125,6 +166,14 @@
 			path = ASDUITests;
 			sourceTree = "<group>";
 		};
+		FA87CC8BC12A0639E5106057 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				402A0A41BAB581D1256B1A3D /* Pods_ASD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +181,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C05440411D001F32004891F5 /* Build configuration list for PBXNativeTarget "ASD" */;
 			buildPhases = (
+				1F007388B60ACD593D7EA90B /* 📦 Check Pods Manifest.lock */,
 				C05440151D001F32004891F5 /* Sources */,
 				C05440161D001F32004891F5 /* Frameworks */,
 				C05440171D001F32004891F5 /* Resources */,
+				6E146C27008C4A4006F6152B /* 📦 Embed Pods Frameworks */,
+				500230DB9CAAF0C3C4367CA7 /* 📦 Copy Pods Resources */,
+				C054404D1D00296E004891F5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,13 +304,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F007388B60ACD593D7EA90B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		500230DB9CAAF0C3C4367CA7 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASD/Pods-ASD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E146C27008C4A4006F6152B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASD/Pods-ASD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C05440151D001F32004891F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F294A91D1566FC005BF4F3 /* LocationProperty.swift in Sources */,
 				C054401F1D001F32004891F5 /* ViewController.swift in Sources */,
 				C054401D1D001F32004891F5 /* AppDelegate.swift in Sources */,
+				C0F294A71D153D59005BF4F3 /* ChessboardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +502,7 @@
 		};
 		C05440421D001F32004891F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8639E6A0944291F69509718 /* Pods-ASD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ASD/Info.plist;
@@ -410,6 +514,7 @@
 		};
 		C05440431D001F32004891F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AE6E78A524C687D8AC341E1 /* Pods-ASD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ASD/Info.plist;
@@ -484,6 +589,7 @@
 				C05440431D001F32004891F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C05440441D001F32004891F5 /* Build configuration list for PBXNativeTarget "ASDTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +598,7 @@
 				C05440461D001F32004891F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C05440471D001F32004891F5 /* Build configuration list for PBXNativeTarget "ASDUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +607,7 @@
 				C05440491D001F32004891F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

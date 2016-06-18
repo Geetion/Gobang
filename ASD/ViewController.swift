@@ -7,19 +7,20 @@
 //
 
 import UIKit
+import SnapKit
+import ReactiveCocoa
 
 class ViewController: UIViewController {
+    
+    lazy var chessboard:ChessboardView = {
+        let width = UIScreen.mainScreen().bounds.width
+        let view = ChessboardView(frame: CGRect(x: 0, y: 100, width: width-1, height: width))
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.view.addSubview(chessboard)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
