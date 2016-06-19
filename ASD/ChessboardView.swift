@@ -9,46 +9,47 @@
 import UIKit
 
 class ChessboardView: UIView {
-
+    
     /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
+     // Only override drawRect: if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func drawRect(rect: CGRect) {
+     // Drawing code
+     }
+     */
     
     
     var gridNumber = 19
-    private var chessProperty = [[(ChessLocation,OccupyState)]]()
+    private var locationPropertyArray = [[LocationProperty]]()
+    private var gridSideLength:CGFloat?
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(location:CGPoint,sideLength:CGFloat) {
+        super.init(frame: CGRect(origin: location, size: CGSize(width: sideLength, height: sideLength)))
         
-        let gridSideLength = frame.width/CGFloat(gridNumber)
-        let chessBoardSideLength = CGFloat(gridNumber + 2) * gridSideLength
+        gridSideLength = frame.width/CGFloat(gridNumber)
+        let chessBoardSideLength = CGFloat(gridNumber + 1) * gridSideLength!
         
-        for xIndex in 0...gridNumber+2{
+        for xIndex in 0...gridNumber+1{
             
-            let location_Y = gridSideLength*CGFloat(xIndex)
+            let location_Y = gridSideLength!*CGFloat(xIndex)
             
             let horizontalLine = UIView(frame: CGRect(x: 0, y: location_Y, width: chessBoardSideLength, height: 1))
             horizontalLine.backgroundColor = UIColor.blackColor()
             self.addSubview(horizontalLine)
             
-            var horizontalState = [(ChessLocation,OccupyState)]()
+            var horizontalState = [(LocationProperty)]()
             
-            for yIndex in 0...gridNumber+2{
+            for yIndex in 0...gridNumber+1{
                 
-                let location_X = gridSideLength*CGFloat(yIndex)
+                let location_X = gridSideLength!*CGFloat(yIndex)
                 let verticalLine = UIView(frame: CGRect(x: location_Y, y:0 , width: 1, height: chessBoardSideLength))
                 verticalLine.backgroundColor = UIColor.blackColor()
                 self.addSubview(verticalLine)
                 
-                let location = ChessLocation(x: location_X, y: location_Y)
-                horizontalState.append(location,OccupyState.empty)
+                let locationProperty = LocationProperty(location: CGPoint(x: location_X, y: location_Y))
+                horizontalState.append(locationProperty)
             }
-            chessProperty.append(horizontalState)
+            locationPropertyArray.append(horizontalState)
         }
     }
     
@@ -58,13 +59,28 @@ class ChessboardView: UIView {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touch:UITouch = touches.first!
-        let location = touch.locationInView(self)
+        let touchLocation = touch.locationInView(self)
         
-        for each in chessProperty{
-            each.ChessLocation
+        for each in locationPropertyArray{
+            for locationProperty in each{
+                let delta_X = fabs(locationProperty.location!.x - touchLocation.x)
+                let delta_Y = fabs(locationProperty.location!.y - touchLocation.y)
+                if delta_X < gridSideLength!/2 && delta_Y < gridSideLength!/2 {
+                    placeChess(locationProperty)
+                }
+            }
         }
-        
-        
     }
-
+    
+    func placeChess(locationProperty:LocationProperty){
+        
+        if locationProperty.state == OccupyState.empty{
+            
+            let chess = Chess(chessType: .User, chessLocation: locationProperty.location!)
+            self.addSubview(chess)
+            
+            locationProperty.state = OccupyState.UIOccupy
+        }
+    }
+    
 }
